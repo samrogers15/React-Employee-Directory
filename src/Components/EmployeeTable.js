@@ -1,15 +1,15 @@
 import { React, useState, useEffect } from "react";
 import { Table } from "react-bootstrap";
 
-const EmployeeTable = () => {
-  const [employees, setEmployeeState] = useState([]);
+const EmployeeTable = ({ search }) => {
+  const [employees, setEmployeesState] = useState([]);
 
   useEffect(() => {
     fetch("https://randomuser.me/api/?results=10000")
       .then((res) => res.json())
       .then((res) => {
         console.log(res);
-        setEmployeeState(res.Results);
+        setEmployeesState(res.Results);
       });
   });
   return (
