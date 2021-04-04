@@ -6,7 +6,7 @@ const JumboTron = () => {
     <Jumbotron>
       <h1>Sam Rogers LLC Employee Directory</h1>
       <p>
-        Welcome to the employee directory for Sam Rogers LLC. This application was designed for a member of the HR team to easily search information on employees in the company. Utilize the search bar below to search for a specific employee or use the table to sort employees by a specific field.
+        Welcome to the employee directory for Sam Rogers LLC. This application was designed for a member of the HR team to easily search information on current employees. Utilize the search bar below to search for a specific employee by name, email address, or location.
       </p>
     </Jumbotron>
   );

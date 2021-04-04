@@ -1,17 +1,21 @@
 import React from "react";
-import { Form, Button } from 'react-bootstrap';
+import { Form } from "react-bootstrap";
 
-const SearchBar = () => {
+const SearchBar = ({ search, setSearchState }) => {
   return (
-    <Form>
-      <Form.Group controlId="formBasicPassword">
-        <Form.Label>Employee Search</Form.Label>
-        <Form.Control type="text" placeholder="Enter" />
-      </Form.Group>
-      <Button variant="primary" type="submit">
-        Search
-      </Button>
-    </Form>
+    <>
+      <Form>
+        <Form.Group>
+          <Form.Label>Employee Search</Form.Label>
+          <Form.Control
+            type="text"
+            placeholder="Enter search criteria here to search for an employee"
+            value={search}
+            onChange={({ target }) => setSearchState(target.value)}
+          />
+        </Form.Group>
+      </Form>
+    </>
   );
 };
 
